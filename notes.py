@@ -4,6 +4,12 @@ import os
 from os import path
 import os.path
 
+if "$EDITOR" != "":
+	editor = "$EDITOR"
+
+else:
+	editor = vi
+
 print ("Welcome to notes")
 
 # Saves the current location in a variable named current_directory.
