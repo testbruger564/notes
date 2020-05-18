@@ -34,7 +34,7 @@ try:
     path = "%s/%s" % (filepath, file)
 
     print ("File '{}' is created.".format(file))
-    os.system("$EDITOR " + path)
+    os.system("editor " + path)
 
     print (path)
 
@@ -52,9 +52,9 @@ except FileExistsError:
 
     if os.path.isfile(path):
         print ("File exist")
-        os.system("$EDITOR " + path)
+        os.system("editor " + path)
     else:
         print ("File not exist")
-        os.system("$EDITOR " + path)
+        os.system("editor " + path)
 
     print (path)
