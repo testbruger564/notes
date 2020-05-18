@@ -3,7 +3,7 @@ Notes.py is app to take quick notes.
 
 You must add notes.py yourself so that it is globally available
 
-Makes notes globally avaliable for current user.
+Makes notes globally available for current user.
 
 $ vi .bashrc
   
