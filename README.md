@@ -7,7 +7,8 @@ Makes notes globally avaliable for current user.
 
 $ vi .bashrc
   
-  add the following lines to the .bashrc file
+  add the following lines to the .bashrc file.
+  Change from command mode to insert mode by pressing i
   
     export PATH=~/notes:$PATH
 
