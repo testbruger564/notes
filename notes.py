@@ -12,43 +12,43 @@ current_directory = os.getcwd()
 
 
 folder = input("Insert folder name: ")
-filesti = "{}/{}".format(current_directory, folder)
+filepath = "{}/{}".format(current_directory, folder)
 
 try:
 
     # Creates the folder.
 
-    os.mkdir(filesti)
+    os.mkdir(filepath)
     print("Directory '{}' is created.".format(folder))
 
     # Creates the file.
 
     file = input("Insert file name: ")
 
-    sti = "%s/%s" % (filesti, file)
+    path = "%s/%s" % (filepath, file)
 
     print ("File '{}' is created.".format(file))
-    os.system("subl " + sti)
+    os.system("subl " + path)
 
-    print (sti)
+    print (path)
 
 except FileExistsError:
     print("The directory '{}' does already exist.".format(folder))
 
     file = input("Insert file name: ")
 
-    sti = "%s/%s" % (filesti, file)
+    path = "%s/%s" % (filepath, file)
 
 
     # Checks if the file exists
     # If it does exist, it get opened
     # if it doesn't exist, it gets created and opened.
 
-    if os.path.isfile(sti):
+    if os.path.isfile(path):
         print ("File exist")
-        os.system("subl " + sti)
+        os.system("subl " + path)
     else:
         print ("File not exist")
-        os.system("subl " + sti)
+        os.system("subl " + path)
 
-    print (sti)
+    print (path)
