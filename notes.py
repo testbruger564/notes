@@ -4,9 +4,12 @@ import os
 from os import path
 import os.path
 
+# Checks if the variable $EDITOR is not empty.
+# If $EDITOR is not empty, then the variable editor is equal to $EDITOR value.
+# Else is the variable editor equal to vi.
+
 if "$EDITOR" != "":
 	editor = "$EDITOR"
-
 else:
 	editor = vi
 
@@ -16,12 +19,10 @@ print ("Welcome to notes")
 
 current_directory = os.getcwd()
 
-
 folder = input("Insert folder name: ")
 filepath = "{}/{}".format(current_directory, folder)
 
 try:
-
     # Creates the folder.
 
     os.mkdir(filepath)
@@ -39,12 +40,12 @@ try:
     print (path)
 
 except FileExistsError:
+
     print("The directory '{}' does already exist.".format(folder))
 
     file = input("Insert file name: ")
 
     path = "%s/%s" % (filepath, file)
-
 
     # Checks if the file exists
     # If it does exist, it get opened
