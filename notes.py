@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-from os import path
 import os.path
 
 # Checks if the variable $EDITOR is not empty.
@@ -11,7 +10,7 @@ import os.path
 if "$EDITOR" != "":
 	editor = "$EDITOR"
 else:
-	editor = vi
+	editor = "vi"
 
 print ("Welcome to notes")
 
@@ -35,6 +34,7 @@ try:
     path = "%s/%s" % (filepath, file)
 
     print ("File '{}' is created.".format(file))
+    
     os.system("editor " + path)
 
     print (path)
